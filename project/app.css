@@ -1,0 +1,70 @@
+.flexbox{
+    display: flex;
+}
+aside{
+    width: 200px;
+}
+nav li{
+    list-style:  none;
+    color: #1abc9c;
+    padding: 5px;
+    height: 100%;
+    width: 100;
+    line-height: 35px;
+    
+}
+header{
+    padding:  1px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 20px;
+}
+input[type=text] {
+    width: 250px;
+    padding: 5px ;
+    margin: 6px 2px;
+    box-sizing: border-box;
+    border: 1px solid #1abc9c;
+  }
+#customer_no
+{
+    width: 80px;
+    padding: 4.5px 10px;
+    margin: 2px 0;
+    box-sizing: border-box;
+}
+#address
+{ 
+    width: 450px;
+    padding: 4.5px 10px;
+    margin: 2px 0;
+    box-sizing: border-box;
+}
+footer{
+    padding: 2px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 16px;
+}
+main{
+    min-height: 68vh;
+}
+a{
+text-decoration: none;
+color:#1abc9c ;
+
+}
+li a:hover {
+    background-color: #5ab610a6;
+    display: block;
+    color: black;
+    box-sizing: border-box;
+  }
+.table_c{
+    text-align: center;
+    color: rgb(26, 25, 23);
+    background-color: #ecf3f3a6;
+
+}
