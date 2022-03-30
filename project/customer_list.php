@@ -19,6 +19,7 @@
 <li><i class="fa fa-bar-chart"></i> Report</li>
 </nav>
 </aside>
+
 <?php
 $con = new mysqli("localhost", 'p_user', '1234','project');
 if($con->connect_error){
@@ -26,6 +27,7 @@ if($con->connect_error){
 } /*else {
     echo "Connection sucessful!";
 } */
+
 $sql="SELECT * FROM customer";
 $result = $con->query($sql);
 if($result->num_rows > 0){
@@ -56,6 +58,8 @@ if($result->num_rows > 0){
 }
 $con->close();
 ?>
+
+<h4>&nbsp&nbsp To edit data<br>&nbsp&nbsp <a href="edit_customer.php">click here</a></h4>
 
 </body>
 </html>

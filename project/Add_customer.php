@@ -18,6 +18,12 @@ $cid = generate_id();
 <aside>
 <nav>
 <li><a href="#"><i class="fa fa-address-book"></i> Add customer </a></li>
+<div class="submenu1">
+    <ul>
+        <li><a href="edit_customer.php">Edit customer</a></h4>
+        <li><a href="customer_list.php"><i class="fa fa-address-card-o"></i> Customer List </a></li>
+    <ul>
+</div>
 <li><a href="customer_list.php"><i class="fa fa-address-card-o"></i> Customer List </a></li>
 <li><a href="https://www.w3schools.com/"><i class="fa fa-plus"></i>Item</a></li>
 <li><i class="fa fa-file"></i> Invoice</li>
