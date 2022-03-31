@@ -13,7 +13,7 @@
 <nav>
 <li><a href="Add_customer.php"><i class="fa fa-address-book"></i> Add customer </a></li>
 <li><a href="customer_list.php"><i class="fa fa-address-card-o"></i> Customer List </a></li>
-<li><a href="https://www.w3schools.com/"><i class="fa fa-plus"></i>Item</a></li>
+<li><a href="Add_item.php"><i class="fa fa-plus"></i>Item</a></li>
 <li><i class="fa fa-file"></i> Invoice</li>
 <li><i class="fa fa-archive"></i> Stock</li>
 <li><i class="fa fa-bar-chart"></i> Report</li>

@@ -6,7 +6,7 @@ aside{
 }
 nav li{
     list-style:  none;
-    color: #1abc9c;
+    color: #606060ff;
     padding: 5px;
     height: 100%;
     width: 100;
@@ -16,8 +16,8 @@ nav li{
 header{
     padding:  1px;
     text-align: center;
-    background: #1abc9c;
-    color: white;
+    background: #d6ed17ff;
+    color: #606060ff;
     font-size: 20px;
 }
 input[type=text] {
@@ -44,8 +44,8 @@ input[type=text] {
 footer{
     padding: 2px;
     text-align: center;
-    background: #1abc9c;
-    color: white;
+    background: #d6ed17ff;
+    color: #606060ff;
     font-size: 16px;
 }
 main{
@@ -68,13 +68,29 @@ li a:hover {
     background-color: #ecf3f3a6;
 
 }
-.submenu1{
-    display: none;
-   /* position: absolute;
-    background: yellow;*/
+
+ul{
+margin-top: auto;
+padding: 0px;
 }
-nav ul li:hover .submenu1{
-    display: block;
-    position: absolute;
-    background: yellow;
+nav ul li{
+    padding: 2px;
+   
 }
+
+#description
+{ 
+    width: 350px;
+    
+    padding: 4.5px 10px;
+    border: 1px solid #1abc9c;
+    box-sizing: border-box;
+}
+input[type=number] {
+    width: 130px;
+    padding: 5px ;
+    margin: 6px 2px;
+    box-sizing: border-box;
+    border: 1px solid #1abc9c;
+  }
+    
