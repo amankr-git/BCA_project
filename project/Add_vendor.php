@@ -3,18 +3,18 @@
 include 'sessionphp.php';
 include 'generateid.php';
 
-$cid = generate_id();
+$vid = generate_vid();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Add customer</title>
+<title>Add vendor</title>
 <link rel="stylesheet" href="app.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<header><h2>Add a new customer<a class="logoutnote" href="logout.php"> Click here<br>Logout&nbsp </a></h2></header>
+<header><h2>Add a new vendor</h2></header>
 <hr>
 <div class=flexbox>
 <aside>
@@ -29,20 +29,19 @@ $cid = generate_id();
 <li><i class="fa fa-file"></i> Invoice</li>
 <li><i class="fa fa-archive"></i> Stock</li>
 <li><i class="fa fa-bar-chart"></i> Report</li>
-
 </ul>
 </nav>
 </aside>
 <main><b>Please provide the following details</b><br><br>
-    <form action="connection.php">
-    <label for ="customer_no">CNo:</label><br>
-    <input type="text" id="customer_no" name="customer_no" value="<?= $cid?>"><br>
-    <label for ="first_name">First name :</label><br>
-    <input type="text" id="first_name" name="first_name"><br>
-    <label for ="last_name">Last name :</label><br>
-    <input type="text" id="last_name" name="last_name"><br>
+    <form action="vconnect.php">
+    <label for ="vendor_no">VNo:</label><br>
+    <input type="text" id="vendor_no" name="vendor_no" value="<?= $vid?>"><br>
+    <label for ="company_name">Comapany Name :</label><br>
+    <input type="text" id="company_name" name="company_name"><br>
     <label for ="phone_no">Phone Number:</label><br>
     <input type="text" id="phone_no" name="phone_no"><br>
+    <label for ="phone_no2">Alternate Phone Number:</label><br>
+    <input type="text" id="phone_no2" name="phone_no2"><br>
     <label for ="address">Address :</label><br>
     <input type="text" id="address" name="address"><br><br><br>
     <button class="button1"> Submit</button>

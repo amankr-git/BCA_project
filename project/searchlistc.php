@@ -1,35 +1,4 @@
-<?php
-include 'sessionphp.php';
-?>
-<!DOCTYPE html>
-<html>
-<head>
-<title>Add customer</title>
-<link rel="stylesheet" href="app.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-<header><h2>List of customers</h2></header>
-<hr>
-<div class=flexbox>
-<aside>
-<nav>
-<ul>
-<li><a href="Add_customer.php"><i class="fa fa-address-book"></i> Add customer </a></li>
-<li><a href="customer_list.php"><i class="fa fa-list-ul"></i> Customer List </a></li>
-<li><a href="Add_item.php"><i class="fa fa-plus"></i> Add Item</a></li>
-<li><a href="#"><i class="fa fa-th-list"></i> Item List </a></li>
-<li><a href="Add_vendor.php"><i class="fa fa-address-book"></i> Add Vendor</a></li>
-<li><a href="vendor_list.php"><i class="fa fa-address-book"></i>Vendor list</a></li>
-<li><i class="fa fa-file"></i> Invoice</li>
-<li><i class="fa fa-archive"></i> Stock</li>
-<li><i class="fa fa-bar-chart"></i> Report</li>
-</ul>
-</nav>
-</aside>
-<h4 class= "note"> To edit data <br> <a href="edit_customer.php">click here</a> </h4>
 <div class="tablel">
-<br>
 <?php
 $con = new mysqli("localhost", 'p_user', '1234','project');
 if($con->connect_error){

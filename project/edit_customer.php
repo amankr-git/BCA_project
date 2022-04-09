@@ -1,4 +1,6 @@
 <?php
+include 'sessionphp.php';?>
+<?php
 $customer_no = null;
 $first_name = null;
 $last_name = null;
@@ -34,12 +36,15 @@ if($result->num_rows > 0) {
 <div class=flexbox>
 <aside>
     <nav>
+    <ul>
         <li><a href="Add_customer.php"><i class="fa fa-address-book"></i> Add customer </a></li>
-        <li><a href="customer_list.php"><i class="fa fa-address-card-o"></i> Customer List </a></li>
-        <li><a href="Add_item.php"><i class="fa fa-plus"></i>Item</a></li>
+        <li><a href="customer_list.php"><i class="fa fa-list-ul"></i> Customer List </a></li>
+        <li><a href="Add_item.php"><i class="fa fa-plus"></i> Add Item</a></li>
+        <li><a href="#"><i class="fa fa-th-list"></i> Item List </a></li>
         <li><i class="fa fa-file"></i> Invoice</li>
         <li><i class="fa fa-archive"></i> Stock</li>
         <li><i class="fa fa-bar-chart"></i> Report</li>
+    </ul>
     </nav>
 </aside>
 <main><b>Please provide the customer number </b><br><br>

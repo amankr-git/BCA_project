@@ -1,3 +1,10 @@
+<?php
+include 'sessionphp.php';
+include 'generateid.php';
+include 'SearchByName.php';
+$iid = generate_iid();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,34 +18,71 @@
 <div class=flexbox>
 <aside>
     <nav>
+    <ul>
         <li><a href="Add_customer.php"><i class="fa fa-address-book"></i> Add customer </a></li>
-        <li><a href="customer_list.php"><i class="fa fa-address-card-o"></i> Customer List </a></li>
+        <li><a href="customer_list.php"><i class="fa fa-list-ul"></i> Customer List </a></li>
+       
         <li><a href="Add_item.php"><i class="fa fa-plus"></i> Add Item</a></li>
+        <li><a href="#"><i class="fa fa-th-list"></i> Item List </a></li>
+        <li><a href="Add_vendor.php"><i class="fa fa-address-book"></i> Add Vendor</a></li>
+        <li><a href="vendor_list.php"><i class="fa fa-address-book"></i>Vendor list</a></li>
+       
         <li><i class="fa fa-file"></i> Invoice</li>
         <li><i class="fa fa-archive"></i> Stock</li>
         <li><i class="fa fa-bar-chart"></i> Report</li>
+    </ul>
     </nav>
 </aside>
-<main><b>Please provide the item details </b><br><br>
+<!--</div>-->
+<main><b class="note">Please provide both item and vendor details </b><br>
+<div class="parent">
+<div class="sform1">
 <form>
-    <label for ="item_no">Item No:</label><br>
-    <input type="text" id="item_no" name="item_no" >
-    <hr>
-    <label for ="first_name">Item name :</label><br>
-    <input type="text" id="first_name" name="first_name" ><br>
+<b>Provide the vendor details  </b><br><br>
+    <label for ="vcname">Vendor Name :</label>
+    <input type="text" id="vcname" name="vcname" value="<?= $vcname?>">
+    <button name="searchi">Search</button><br>
+    <label for ="vendor_id">Vendor Id:</label>
+    <span class="tab"><input type="text" id="vendor_id" name="vendor_id" value="<?= $vid?>"></span>
+    </form>
+ </div>
+ <div class="sform">
+<form action="iconnect.php">
+    <b>Provide the Item details </b><br><br>
+    <label for ="item_no">Item No:</label>&nbsp&nbsp&nbsp&nbsp
+    <input type="text" id="item_no" name="item_no" value="<?= $iid?>"><br>
+    <label for ="item_name">Item name:</label>
+    <input type="text" id="item_name" name="item_name" ><br>
+    
+    <label for ="rate">Rate :</label>
+    <span class="tab"><input type="number" id="rate" name="rate" ></span><br>
+    <label for ="tax">Tax (in %):</label>
+    <select name = "tax" class="tax">
+            <option value = "0" selected>GST Free</option>
+            <option value = "5" >5% GST</option>
+            <option value = "12" >12% GST</option>
+            <option value = "18" >18% GST</option>
+            <option value = "28" >28% GST</option>
+    </select><br><br>
     <label for ="description">Description:</label><br>
-    <textarea id="description" name="description" rows="4" clos="40" ></textarea>
+    <textarea id="description" name="description" rows="4" clos="40" ></textarea><br>
+    
+    <label for ="opening_stock">Opening stock :</label>
+    <input type="number" id="opening_stock" name="opening_stock">&nbsp&nbsp<br>
+    <label for ="purchased_rate">Purchased Rate:</label>
+    <input type="number" id="purchased_rate" name="purchased_rate" ><br>
+    
+    <input type="hidden" name="vcname" value="<?= $vcname?>">
+    <input type="hidden" name="vendor_id" value=<?= $vid ?>>
     <br>
-    <hr>
-    <label for ="first_name">Selling price :</label><br>
-    <input type="number" id="first_name" name="first_name" ><br>
-    <label for ="address">Others :</label><br>
-    <input type="text" id="address" name="address" ><br><br>
     <button class="Submit"> Submit</button>
+    <button class="button2" type="reset">Reset</button>
 </form>
-    </main>
+</main>
 </div>
-<hr>
-<footer><h2>&copy; 2021 Copyright - All Rights Reserved</h2></footer>
+
+<div>
+<!--<footer><h2>&copy; 2021 Copyright - All Rights Reserved</h2></footer>-->
+<footer class="footerlist"><h2>&copy; 2021-All Rights Reserved.</h2></footer>
 </body>
 </html>
