@@ -6,12 +6,12 @@ if($con->connect_error){
     echo "Connection sucessful!";
 }*/
 $customer_no = $_GET['customer_no'];
-$first_name = $_GET['first_name'];
-$last_name = $_GET['last_name'];
+$name = $_GET['name'];
+//$last_name = $_GET['last_name'];
 $phone_no = $_GET['phone_no'];
 $address = $_GET['address'];
 
-$sql = "INSERT into customer values('$customer_no','$first_name','$last_name','$phone_no','$address')";
+$sql = "INSERT into customer values('$customer_no','$name','$phone_no','$address')";
 if($con->query($sql)== true)
 {
     echo "Your data is successfully submitted.";

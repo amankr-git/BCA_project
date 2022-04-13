@@ -2,8 +2,8 @@
 include 'sessionphp.php';?>
 <?php
 $customer_no = null;
-$first_name = null;
-$last_name = null;
+$name = null;
+//$last_name = null;
 $phone_no = null;
 $address = null;
 if(isset($_GET['search'])) {
@@ -15,8 +15,8 @@ $result = $con->query($sql);
 
 if($result->num_rows > 0) {
     $row = $result->fetch_assoc();
-    $first_name = $row['first_name'];
-    $last_name = $row['last_name'];
+    $name = $row['name'];
+    //$last_name = $row['last_name'];
     $phone_no = $row['phone_no'];
     $address = $row['address'];
 }
@@ -41,7 +41,7 @@ if($result->num_rows > 0) {
         <li><a href="customer_list.php"><i class="fa fa-list-ul"></i> Customer List </a></li>
         <li><a href="Add_item.php"><i class="fa fa-plus"></i> Add Item</a></li>
         <li><a href="#"><i class="fa fa-th-list"></i> Item List </a></li>
-        <li><i class="fa fa-file"></i> Invoice</li>
+        <li><a href="create_invoice.php"><i class="fa fa-file"></i>Create Invoice</a></li>
         <li><i class="fa fa-archive"></i> Stock</li>
         <li><i class="fa fa-bar-chart"></i> Report</li>
     </ul>
@@ -55,10 +55,10 @@ if($result->num_rows > 0) {
 </form>
 <form action="edit_c_submit.php">
     <input type="hidden" name="cu_no" value=<?= $customer_no ?>>
-    <label for ="first_name">First name :</label><br>
-    <input type="text" id="first_name" name="first_name" value=<?= $first_name ?>><br>
-    <label for ="last_name">Last name :</label><br>
-    <input type="text" id="last_name" name="last_name" value=<?= $last_name ?>><br>
+    <label for ="name">Name :</label><br>
+    <input type="text" id="name" name="name" value=<?= $name ?>><br>
+   <!--   <label for ="last_name">Last name :</label><br>
+    <input type="text" id="last_name" name="last_name" value=><br>-->
     <label for ="phone_no">Phone Number:</label><br>
     <input type="text" id="phone_no" name="phone_no" value=<?= $phone_no ?>><br>
     <label for ="address">Address :</label><br>

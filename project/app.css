@@ -80,6 +80,7 @@ li a:hover {
     background-color: #ADEFD1FF /* #34F5C5#ebe97e*/;
 }
 .table_c,th, td{
+    word-wrap: break-word;
     border: 1px solid black;  
     border-collapse: collapse;
     padding: 3px;
@@ -120,14 +121,14 @@ nav ul li{
 
 #description
 { 
-    width: 350px;
+    width: 250px;
     
     padding: 4.5px 10px;
     border: 1px solid black;
     box-sizing: border-box;
 }
 input[type=number] {
-    width: 140px;
+    width: 120px;
     padding: 5px ;
     margin: 6px 2px;
     box-sizing: border-box;
@@ -195,17 +196,26 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
-.sform{
+.sform {
    border-left: dotted #2F455C 1px;
     padding: 2rem 2rem;
     vertical-align: middle;
     float: right;
 }
+#item_no1,#item_no2,#item_no3,#item_no4,#item_no5,#item_no6,#item_no7,#item_no8,#item_no9,#item_no10{
+ width: 80px;
+}
+
+#item_name1,#item_name2,#item_name3,#item_name4,#item_name5,#item_name6,#item_name7,#item_name8,#item_name9,#item_name10{
+    width: 150px;
+}
+
 
 .sform1{
     padding: 2rem 2rem;
     vertical-align: middle;
     float: left;   
+    
 }
 .formsc{
     position: relative;
@@ -218,18 +228,23 @@ margin: 4px 2px;
 }
 .formsi
 {
+border-top: #1DCDFE;
 position: absolute;
-top: 285px;
+top: 155px;
 left: 210px;
-} 
+}/* 
 #item_name,#item_no{
     width: 170px;
   padding: 4px ;
   margin: 4px 3px;
   
-}
+}*/
 /*.parent{
     border: 1px solid black;
     
     padding: 2rem 2rem;
     margin: 1rem ;}*/
+.gtotal{
+    padding: 0px ;
+    margin: 0px;
+}

@@ -18,10 +18,10 @@ include 'sessionphp.php';
 <li><a href="Add_customer.php"><i class="fa fa-address-book"></i> Add customer </a></li>
 <li><a href="customer_list.php"><i class="fa fa-list-ul"></i> Customer List </a></li>
 <li><a href="Add_item.php"><i class="fa fa-plus"></i> Add Item</a></li>
-<li><a href="#"><i class="fa fa-th-list"></i> Item List </a></li>
+<li><a href="item_list.php"><i class="fa fa-th-list"></i> Item List </a></li>
 <li><a href="Add_vendor.php"><i class="fa fa-address-book"></i> Add Vendor</a></li>
 <li><a href="vendor_list.php"><i class="fa fa-address-book"></i>Vendor list</a></li>
-<li><i class="fa fa-file"></i> Invoice</li>
+<li><a href="create_invoice.php"><i class="fa fa-file"></i>Create Invoice</a></li>
 <li><i class="fa fa-archive"></i> Stock</li>
 <li><i class="fa fa-bar-chart"></i> Report</li>
 </ul>
@@ -46,7 +46,7 @@ if($result->num_rows > 0){
     echo "<tr>";
     echo "<th>Customer no</th>";
     echo "<th>First name</th>";
-    echo "<th>Last name</th>";
+    //echo "<th>Last name</th>";
     echo "<th>Phone no</th>";
     echo "<th>Address</th>";
     echo "</tr>";
@@ -54,8 +54,8 @@ if($result->num_rows > 0){
     while ($row=$result->fetch_assoc()) {
         echo "<tr>";
         echo'<td> ' .$row["customer_no"].'</td>';
-        echo'<td> ' .$row["first_name"].'</td>';
-        echo'<td> ' .$row["last_name"].'</td>';
+        echo'<td> ' .$row["name"].'</td>';
+        //echo'<td> ' .$row["last_name"].'</td>';
         echo'<td> ' .$row["phone_no"].'</td>';
         echo'<td> ' .$row["address"].'</td>';
         echo "</tr>";
