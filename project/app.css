@@ -6,7 +6,7 @@ aside{
 }
 nav li{
     list-style:  none;
-    color: #606060ff;
+    color: #2F455C;
     padding: 5px;
     height: 100%;
     width: 100;
@@ -16,16 +16,24 @@ nav li{
 header{
     padding:  1px;
     text-align: center;
-    background: #d6ed17ff;
-    color: #606060ff;
+    background:#1DCDFE;
+    color: #2F455C;
     font-size: 20px;
 }
+.dropdown {
+    width: 140px;
+    padding: 5px ;
+    margin: 6px 2px;
+    box-sizing: border-box;
+    border: 1px solid #2F455C;
+  }
+
 input[type=text] {
     width: 250px;
     padding: 5px ;
     margin: 6px 2px;
     box-sizing: border-box;
-    border: 1px solid #1abc9c;
+    border: 1px solid #2F455C;
   }
 #customer_no
 {
@@ -44,8 +52,8 @@ input[type=text] {
 footer{
     padding: 2px;
     text-align: center;
-    background: #d6ed17ff;
-    color: #606060ff;
+    background:#1DCDFE;
+    color: #2F455C;
     font-size: 16px;
 }
 main{
@@ -53,21 +61,54 @@ main{
 }
 a{
 text-decoration: none;
-color:#1abc9c ;
+color:#2F455C;
 
 }
 li a:hover {
-    background-color: #5ab610a6;
+    background-color: #34F5C5;/*#5ab610a6*/
     display: block;
     color: black;
     box-sizing: border-box;
   }
 .table_c{
+    
+    border: 1px solid black;
+    padding: auto;
+    border-spacing:3px ;
     text-align: center;
-    color: rgb(26, 25, 23);
-    background-color: #ecf3f3a6;
-
+    color: #2F455C;
+    background-color: #ADEFD1FF /* #34F5C5#ebe97e*/;
 }
+.table_c,th, td{
+    word-wrap: break-word;
+    border: 1px solid black;  
+    border-collapse: collapse;
+    padding: 3px;
+    
+}
+.tablel{
+    margin-right: auto;
+    margin-left: 40px;
+ 
+}
+.note{
+font-size: 15px;
+margin-top: 0%;
+color: red;
+}
+.logoutnote{
+    float: right;
+font-weight: bold;
+font-size: 17px;
+    color: rgb(255, 0, 0);
+}
+
+/*.note ,input[type=text]{
+    width: 140px;
+    padding: 5px ;
+    margin: 6px 2px;
+  
+}*/
 
 ul{
 margin-top: auto;
@@ -80,17 +121,130 @@ nav ul li{
 
 #description
 { 
-    width: 350px;
+    width: 250px;
     
     padding: 4.5px 10px;
-    border: 1px solid #1abc9c;
+    border: 1px solid black;
     box-sizing: border-box;
 }
 input[type=number] {
+    width: 120px;
+    padding: 5px ;
+    margin: 6px 2px;
+    box-sizing: border-box;
+    border: 1px solid black;
+  }
+    
+.footerlist{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+.editnote1{
+    position: absolute;
+    
+    
+}
+input[type=password] {
+    width: 250px;
+    padding: 5px ;
+    margin: 6px 2px;
+    box-sizing: border-box;
+    border: 1px solid #2F455C;
+  }
+.form{
+    border: 2px solid #1DCDFE;
+    margin: auto;
+    margin-top: 7%;
+    width: 20%;
+    padding: 10px;
+}
+.loginheader{
+font-size: 16px;
+}
+/*#item_no
+{
+    width: 70px;
+    padding: 4.5px 10px;
+    margin: 2px 0;
+    box-sizing: border-box;
+}*/
+
+.tab { 
+    display:inline-block; 
+    margin-left: 34px; 
+}
+.tab1 { 
+    display:inline-block; 
+    margin-left: 45px; 
+}
+#vendor_id{
     width: 130px;
     padding: 5px ;
     margin: 6px 2px;
     box-sizing: border-box;
-    border: 1px solid #1abc9c;
-  }
+    border: 1px solid black;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.sform {
+   border-left: dotted #2F455C 1px;
+    padding: 2rem 2rem;
+    vertical-align: middle;
+    float: right;
+}
+#item_no1,#item_no2,#item_no3,#item_no4,#item_no5,#item_no6,#item_no7,#item_no8,#item_no9,#item_no10{
+ width: 80px;
+}
+
+#item_name1,#item_name2,#item_name3,#item_name4,#item_name5,#item_name6,#item_name7,#item_name8,#item_name9,#item_name10{
+    width: 150px;
+}
+
+
+.sform1{
+    padding: 2rem 2rem;
+    vertical-align: middle;
+    float: left;   
     
+}
+.formsc{
+    position: relative;
+  
+}
+#first_name,#last_name,#customer_nu{
+width: 170px;
+padding: 4px ;
+margin: 4px 2px;
+}
+.formsi
+{
+border-top: #1DCDFE;
+position: absolute;
+top: 155px;
+left: 210px;
+}/* 
+#item_name,#item_no{
+    width: 170px;
+  padding: 4px ;
+  margin: 4px 3px;
+  
+}*/
+/*.parent{
+    border: 1px solid black;
+    
+    padding: 2rem 2rem;
+    margin: 1rem ;}*/
+.gtotal{
+    padding: 0px ;
+    margin: 0px;
+}

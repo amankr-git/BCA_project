@@ -5,13 +5,13 @@ if($con->connect_error){
 }/* else {
     echo "Connection sucessful!";
 }*/
-$customer_no = $_GET['customer_no'];
-$name = $_GET['name'];
-//$last_name = $_GET['last_name'];
+$vendor_no = $_GET['vendor_no'];
+$company_name = $_GET['company_name'];
 $phone_no = $_GET['phone_no'];
+$phone_no2 = $_GET['phone_no2'];
 $address = $_GET['address'];
 
-$sql = "INSERT into customer values('$customer_no','$name','$phone_no','$address')";
+$sql = "INSERT into vendor values('$vendor_no','$company_name','$phone_no','$phone_no2','$address')";
 if($con->query($sql)== true)
 {
     echo "Your data is successfully submitted.";
@@ -20,5 +20,3 @@ else{
     echo $con->error;
 }
 ?>
-
-
