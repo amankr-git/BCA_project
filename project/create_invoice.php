@@ -30,7 +30,10 @@
 </nav>
 </aside>
 <div> 
-<form action="" method="">
+<form action="Invoice_connect.php" method="post">
+<label for ="inv_no">Invoice number :</label>
+<input type="text" id="inv_no" name="inv_no" placeholder="inv_no">
+<hr>
 <div class="">
 <label for ="customer_name">Customer Name:</label>
 <input type="text" id="customer_name" name="customer_name" placeholder="Customer name" >
@@ -46,6 +49,7 @@
 <button type="button" onclick="appendRow()">Add Row</button>
 <tr>
     <th>Serial no.</th>
+    <th>Particular no.</th>
     <th>Particulars</th>
     <th>Quantity</th>
     <th>Rate</th>
@@ -64,7 +68,7 @@
  </table>
 
 </div>
-</form>
+
 <hr>
 <label for ="tax">Tax</label>
 <input type="text" id="tax" name="tax" placeholder="tax" >
@@ -73,7 +77,7 @@
 <label for ="total">Total:</label>
 <input type="text" id="total" name="total" placeholder="Total" >
 <button>Submit</button>
-
+</form>
 <div>
     <script>
         appendRow();
@@ -86,28 +90,51 @@
             let tableDataSno = document.createElement("td");
             tableRow.appendChild(tableDataSno);
             let inputSno = document.createElement("input");
+            let inputSnoName = document.createAttribute("name"); //added for adding attribute
+            inputSnoName.value ="sno[]";                         //added for adding attribute value
+            inputSno.setAttributeNode(inputSnoName);            //added for setting attribute value
             tableDataSno.appendChild(inputSno);
+            
+            let tableDataItmno = document.createElement("td");
+            tableRow.appendChild(tableDataItmno);
+            let inputItmno = document.createElement("input");
+            let inputItmnoName = document.createAttribute("name"); //added for adding attribute
+            inputItmnoName.value ="itemno[]";                         //added for adding attribute value
+            inputItmno.setAttributeNode(inputItmnoName);      
+            tableDataItmno.appendChild(inputItmno);
 
-            let tableDataPart = document.createElement("td");
-            tableRow.appendChild(tableDataPart);
-            let inputPart = document.createElement("input");
-            tableDataPart.appendChild(inputPart);
+            let tableDataParticularNames = document.createElement("td");
+            tableRow.appendChild(tableDataParticularNames);
+            let inputParticularNames = document.createElement("input");
+            let inputParticularNamesName = document.createAttribute("name"); //added for adding attribute
+            inputParticularNamesName.value ="ParticularNames[]";                         //added for adding attribute value
+            inputParticularNames.setAttributeNode(inputParticularNamesName); 
+            tableDataParticularNames.appendChild(inputParticularNames);
+
+            
 
             let tableDataQuantity= document.createElement("td");
             tableRow.appendChild(tableDataQuantity);
             let inputQuantity = document.createElement("input");
+            let inputQuantityName = document.createAttribute("name");       //added for adding attribute
+            inputQuantityName.value ="quantity[]";                         //added for adding attribute value
+            inputQuantity.setAttributeNode(inputQuantityName);  
             tableDataQuantity.appendChild(inputQuantity);
             
-        
-
             let tableDataRate = document.createElement("td");
             tableRow.appendChild(tableDataRate);
             let inputRate = document.createElement("input");
+            let inputRateName = document.createAttribute("name");   //added for adding attribute
+            inputRateName.value ="rate[]";                         //added for adding attribute value
+            inputRate.setAttributeNode(inputRateName);
             tableDataRate.appendChild(inputRate);
 
             let tableDataAmount = document.createElement("td");
             tableRow.appendChild(tableDataAmount);
             let inputAmount = document.createElement("input");
+            let inputAmountName = document.createAttribute("name");   //added for adding attribute
+            inputAmountName.value ="amount[]";                         //added for adding attribute value
+            inputAmount.setAttributeNode(inputAmountName);
             tableDataAmount.appendChild(inputAmount);
         }
 
