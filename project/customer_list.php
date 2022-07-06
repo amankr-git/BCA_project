@@ -71,6 +71,6 @@ $con->close();
 </div>
 <!--<h4 class="">&nbsp&nbsp To edit data &nbsp&nbsp <a href="edit_customer.php">click here</a></h4>-->
 
-<footer class="footerlist"><h2>&copy; 2021-All Rights Reserved.</h2></footer>
+<!--<footer class="footerlist"><h2>&copy; 2021-All Rights Reserved.</h2></footer>-->
 </body>
 </html>

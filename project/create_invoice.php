@@ -33,14 +33,17 @@
 <form action="Invoice_connect.php" method="post">
 <label for ="inv_no">Invoice number :</label>
 <input type="text" id="inv_no" name="inv_no" placeholder="inv_no">
+
 <hr>
 <div class="">
+<label for ="customer_no">Customer no/ID :</label>
+<input type="text" id="customer_no" name="customer_no"  placeholder="Cno/ID"><br>
 <label for ="customer_name">Customer Name:</label>
 <input type="text" id="customer_name" name="customer_name" placeholder="Customer name" >
 <label for ="phone_no">Phone no:</label>
 <input type="number" id="phone_number" name="phone_no" placeholder="Phone no">
 <label for ="address">Address:</label>
-<input type="text" id="address1" name="address1" placeholder="Address" >
+<input type="text" id="address" name="address" placeholder="Address" >
 <hr>
 </div>
 <!---<div class="invoice-item-details">-->
@@ -75,15 +78,18 @@
 <label for ="discount">Discount:</label>
 <input type="text" id="discount" name="discount" placeholder="Discount" >
 <label for ="total">Total:</label>
-<input type="text" id="total" name="total" placeholder="Total" >
+<input type="text" id="total" name="total" placeholder="Total" ><br>
+<input type = "button" value = "calculate"  onclick="calculate()">
 <button>Submit</button>
+
 </form>
 <div>
     <script>
+        let slno=0;
         appendRow();
-        appendRow();
+        
         function appendRow() {
-
+            slno++;
             let tableRow = document.createElement("tr");   
             document.getElementById("bill-particulars").appendChild(tableRow); 
             
@@ -93,6 +99,9 @@
             let inputSnoName = document.createAttribute("name"); //added for adding attribute
             inputSnoName.value ="sno[]";                         //added for adding attribute value
             inputSno.setAttributeNode(inputSnoName);            //added for setting attribute value
+            let inputSnoValue = document.createAttribute("Value");
+            inputSnoValue.value = slno;
+            inputSno.setAttributeNode(inputSnoValue);
             tableDataSno.appendChild(inputSno);
             
             let tableDataItmno = document.createElement("td");
@@ -137,8 +146,24 @@
             inputAmount.setAttributeNode(inputAmountName);
             tableDataAmount.appendChild(inputAmount);
         }
-
+        
+       
+        function calculate() 
+        {
+        
+        let rate = document.getElementsByName("rate[]");
+        let quantity = document.getElementsByName("quantity[]");
+        let amount = document.getElementsByName("amount[]");
+        
+        console.log(rate[0]);
+        //amount =rate * quantity;
+        //for(var i=0; i<3; i++){
+        
+//}
+        
+    }
     </script>
+    
 </body>
 
 </html>

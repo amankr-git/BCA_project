@@ -11,7 +11,7 @@
                 amount1 = Number(document.getElementById('Amount1').value);
 				amount2= Number(document.getElementById('Amount2').value);
 				amount3= Number(document.getElementById('Amount3').value);
-				amount1= rate1* quantity1;
+				
                 amount2= rate2* quantity2;
                 amount3= rate3* quantity3;
 				document.getElementById('Amount1').value = amount1;
