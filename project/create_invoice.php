@@ -154,12 +154,9 @@
         let rate = document.getElementsByName("rate[]");
         let quantity = document.getElementsByName("quantity[]");
         let amount = document.getElementsByName("amount[]");
-        
-        console.log(rate[0]);
         //amount =rate * quantity;
-        //for(var i=0; i<3; i++){
+        //console.log(rate[0]);
         
-//}
         
     }
     </script>

@@ -84,3 +84,23 @@ if ($result->num_rows > 0) {
 $con->close();
 return $iid;
 }
+
+function get_Invid()
+{
+    $con = new mysqli("localhost", 'p_user', '1234','project');
+    if($con->connect_error){
+        die($con->connect_error);
+    }/* else {
+        echo "Connection sucessful!";
+    } */
+$sql = "select INVOICE_NO from invoice_main order by INVOICE_NO desc limit 1";
+$result = $con->query($sql);
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $Invid = $row['INVOICE_NO'];
+   
+}
+$con->close();
+//echo "$Invid";
+return $Invid;
+}
