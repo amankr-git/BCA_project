@@ -22,8 +22,9 @@
 <li><a href="Add_item.php"><i class="fa fa-plus"></i> Add Item</a></li>
 <li><a href="item_list.php"><i class="fa fa-th-list"></i> Item List </a></li>
 <li><a href="Add_vendor.php"><i class="fa fa-address-book"></i> Add Vendor</a></li>
-<li><a href="vendor_list.php"><i class="fa fa-address-book"></i>Vendor list</a></li>
-<li><a href="create_invoice.php"><i class="fa fa-file"></i>Create Invoice</a></li>
+<li><a href="vendor_list.php"><i class="fa fa-address-book"></i> Vendor list</a></li>
+<li><a href="create_invoice.php"><i class="fa fa-file"></i> Create Invoice</a></li>
+<li><a href="print_bill.php"><i class="fa fa-print"></i> Print Bill</a></li>
 <li><i class="fa fa-archive"></i> Stock</li>
 <li><i class="fa fa-bar-chart"></i> Report</li>
 </ul>

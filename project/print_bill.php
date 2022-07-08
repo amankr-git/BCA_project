@@ -38,7 +38,7 @@ if($result->num_rows > 0) {
 <html>
 <head>
 <title>Bill Preview</title>
-<link rel="stylesheet" href="app1.css">
+<link rel="stylesheet" href="app.css">
 </head>
 <body>
 <div class="billpreview">
@@ -49,7 +49,7 @@ if($result->num_rows > 0) {
 <form method="post">
 <br>
 <label for ="inv_no">Invoice no:</label>
-<input type="text" id="Invid" name="Invid" placeholder="inv_no" value=<?="$Inv_id"?>>&nbsp&nbsp&nbsp&nbsp
+<input type="text" id="Invid" name="Invid" placeholder="inv_no" value=<?="$Inv_id"?>>&nbsp&nbsp&nbsp
 <button name="search" id="search" >Search </button>
 <form>
 <br><br>
