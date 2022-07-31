@@ -15,9 +15,10 @@ $amount=$_POST["amount"];
 
 //$invoice_date='2022-02-11';
 $cust_no=$_POST["customer_no"];
-$cust_name=$_POST["customer_name"];
-$cust_phno=$_POST["phone_no"];
-$cust_address=$_POST["address"];
+//$cust_name=$_POST["customer_name"];
+//$cust_phno=$_POST["phone_no"];
+//CUSTOMER_NAME,CUSTOMER_PHNO,CUSTOMER_ADDRESS,'$cust_name','$cust_phno','$cust_address'
+//$cust_address=$_POST["address"];
 $tax=$_POST["tax"];
 $discount=$_POST["discount"];
 $total=$_POST["total"];
@@ -26,7 +27,7 @@ for($i=0; $i<count($sno); $i++){
     echo "$invoice_no $sno[$i] $item_no[$i] $particular_names[$i] $quantity[$i] $rate[$i] $amount[$i] <br>";
 }
 
-$sql2 = "INSERT INTO INVOICE_MAIN(INVOICE_NO,INVOICE_DATE,CUSTOMER_NO,CUSTOMER_NAME,CUSTOMER_PHNO,CUSTOMER_ADDRESS,TAX,DISCOUNT,TOTAL)VALUES('$invoice_no',CURDATE(),'$cust_no','$cust_name','$cust_phno','$cust_address','$tax','$discount','$total')";
+$sql2 = "INSERT INTO INVOICE_MAIN(INVOICE_NO,INVOICE_DATE,CUSTOMER_NO,TAX,DISCOUNT,TOTAL)VALUES('$invoice_no',CURDATE(),'$cust_no','$tax','$discount','$total')";
  
 if($con->query($sql2)== true)
     {

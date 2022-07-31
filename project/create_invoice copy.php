@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invoice</title>
-    
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+	</script>
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -82,9 +84,11 @@
 <label for ="total">Total:</label>
 <input type="text" id="total" name="total" placeholder="Total" ><br>
 <input type = "button" value = "calculate"  onclick="calculate()">
+
 <button>Submit</button>
 
 </form>
+<button  onclick="myFunction()">try</button>
 <div>
     <script>
         let slno=0;
@@ -110,9 +114,12 @@
             tableRow.appendChild(tableDataItmno);
             let inputItmno = document.createElement("input");
             let inputItmnoName = document.createAttribute("name"); //added for adding attribute
-            inputItmnoName.value ="itemno[]";                         //added for adding attribute value
+            inputItmnoName.value ="itemno[]"; 
+            //onkeyup="GetDetail(this.value)"        
+                        
             inputItmno.setAttributeNode(inputItmnoName);      
             tableDataItmno.appendChild(inputItmno);
+            
 
             let tableDataParticularNames = document.createElement("td");
             tableRow.appendChild(tableDataParticularNames);
@@ -157,12 +164,11 @@
         let quantity = document.getElementsByName("quantity[]");
         let amount = document.getElementsByName("amount[]");
         //amount =rate * quantity;
-        //console.log(rate[0]);
+        console.log(rate[0]);
         
         
     }
-    </script>
-    
+</script>
 </body>
 
 </html>
